@@ -37,3 +37,10 @@ ALTER TABLE `mercadinho`.`pedidos`
 ADD CONSTRAINT `pedidoCliente`
   FOREIGN KEY (`idCliente`)
   REFERENCES `mercadinho`.`cliente` (`idCliente`);
+  
+insert into cliente (nome, cpf, idade, endereco) values ("joaquim","432445643", 29, "rua do sabao");
+select * from cliente;
+
+UPDATE `mercadinho`.`cliente` SET `idade` = '30', `telefone` = '3189882918' WHERE (`idCliente` = '1');
+
+DELETE FROM cliente WHERE cliente.idCliente = 4;
