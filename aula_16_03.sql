@@ -28,3 +28,12 @@ ADD CONSTRAINT `idCliente`
   REFERENCES `mercadinho`.`cliente` (`idCliente`)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
+  
+  
+ALTER TABLE `mercadinho`.`pedidos` 
+DROP FOREIGN KEY `idCliente`;
+
+ALTER TABLE `mercadinho`.`pedidos` 
+ADD CONSTRAINT `pedidoCliente`
+  FOREIGN KEY (`idCliente`)
+  REFERENCES `mercadinho`.`cliente` (`idCliente`);
