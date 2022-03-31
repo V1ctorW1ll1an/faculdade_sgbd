@@ -51,24 +51,22 @@ select * from f
 	f.nome_func = fp.nome_func;
     
     
+select sum(fp.salario) from f 
+	join fp
+    on f.nome_func = fp.nome_func;
     
+select * from f 
+	join fp
+    on f.nome_func = fp.nome_func
+    where fp.salario >= 1500;
     
+select *  from f join fp
+    on f.nome_func = fp.nome_func;
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+select f.nome_func from f 
+	join fp
+    on f.nome_func = fp.nome_func
+    where fp.salario = (select max(fp.salario) from f join fp
+    on f.nome_func = fp.nome_func);
 
-
+SELECT * FROM mercadinho.funcionario_pi;
