@@ -70,3 +70,19 @@ select f.nome_func from f
     on f.nome_func = fp.nome_func);
 
 SELECT * FROM mercadinho.funcionario_pi;
+
+select f.nome_func from f 
+	join fp
+    on f.nome_func = fp.nome_func
+    where fp.salario in (1300, 5300);
+    
+    
+select f.nome_func from f 
+	join fp
+    on f.nome_func = fp.nome_func
+    where fp.salario <> 1300 and fp.salario <> 5300;
+    
+select f.nome_func from f 
+	join fp
+    on f.nome_func = fp.nome_func
+    where fp.salario not in (1300, 5300);
